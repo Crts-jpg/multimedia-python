@@ -18,7 +18,6 @@ speed_up_video.write_videofile('.././Video/DP_buutFastt.mp4')
 
 # ? hasilnya ada di folder script
 
-
 # ! GUI Tkinter
 
 import tkinter as tk
