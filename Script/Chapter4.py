@@ -5,13 +5,23 @@ pygame.init()
 
 screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("DP(MJ) Game")
+Image = pygame.image.load('../Gambar/DP.jpg')
+sound = pygame.mixer.Sound('../Audio/Deadpool_Intro.mp3')
 
+x = 0
 running = True
 while running :
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-        
+            
+    x += 5
+    if x > 800:
+        x = 0
+    
+    screen.fill((0, 0, 0))
+    screen.blit(Image, (x, 100))
+    sound.play()
     pygame.display.flip()
     
 pygame.quit()
